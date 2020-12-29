@@ -7,4 +7,12 @@ class TweetsController < ApplicationController
       redirect to "/login"
     end
   end
+
+  get "/tweets/new" do
+    if logged_in?
+
+    else
+      redirect to "/login"
+    end
+  end
 end

@@ -41,4 +41,11 @@ class UsersController < ApplicationController
       redirect to "/signup"
     end
   end
+
+  get "/logout" do
+    if logged_in?
+    else
+      redirect to "/"
+    end
+  end
 end

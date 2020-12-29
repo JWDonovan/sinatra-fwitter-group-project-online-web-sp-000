@@ -11,4 +11,11 @@ class UsersController < ApplicationController
       redirect to "/tweets"
     end
   end
+
+  post "/signup" do
+    if params[:username] == "" || params[:email] == "" || params[:password] == ""
+      redirect to "/signup"
+    else
+    end
+  end
 end

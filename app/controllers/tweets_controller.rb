@@ -48,4 +48,24 @@ class TweetsController < ApplicationController
       redirect to "/login"
     end
   end
+
+  patch "/tweets/:id" do
+    if logged_in?
+      if params[:content] == ""
+        redirect to "/tweets/#{params[:id]}/edit"
+      else
+
+      end
+    else
+      redirect to "/login"
+    end
+  end
+
+  delete "/tweets/:id" do
+    if logged_in?
+
+    else
+      redirect to "/login"
+    end
+  end
 end

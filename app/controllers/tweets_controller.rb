@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  post "/tweets/new" do
+  post "/tweets" do
     if logged_in?
       if params[:content] == ""
         redirect to "/tweets/new"

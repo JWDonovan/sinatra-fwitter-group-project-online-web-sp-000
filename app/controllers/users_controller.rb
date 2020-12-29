@@ -30,4 +30,8 @@ class UsersController < ApplicationController
       redirect to "/tweets"
     end
   end
+
+  post "/login" do
+    user = User.find_by(username: params[:username])
+  end
 end
